@@ -1,0 +1,23 @@
+{
+  "name": "test-svitsoft-src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/style.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Makskravch/test-svitsoft-src.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Makskravch/test-svitsoft-src/issues"
+  },
+  "homepage": "https://github.com/Makskravch/test-svitsoft-src#readme",
+  "devDependencies": {
+    "sass": "^1.27.0"
+  }
+}
