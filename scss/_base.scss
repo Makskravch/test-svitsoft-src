@@ -9,12 +9,12 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: "HelveticaNeueCyr", "Segoe UI", "SegoeUI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
-  color: $color-text;
-  height: calc(100vh + 200px);
-  background: #e6f9ff;
+  color: $color-primary;
+  min-height: calc(100vh + 200px);
+  background-color: $color-background;
 }
 
 img,
@@ -34,11 +34,6 @@ i {
   path {
     fill: currentColor;
   }
-}
-
-a,
-button {
-  color: $color-text;
 }
 
 button {
