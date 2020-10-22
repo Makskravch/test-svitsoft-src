@@ -12,8 +12,9 @@ body {
   font-family: "HelveticaNeueCyr", "Segoe UI", "SegoeUI", "Helvetica Neue",
     Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
   color: $color-primary;
-  min-height: calc(100vh + 200px);
   background-color: $color-background;
 }
 

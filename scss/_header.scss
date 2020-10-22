@@ -12,7 +12,7 @@
   background-color: $color-background-secondary;
 }
 .header__logo {
-  margin-right: 55px;
+  margin-right: 46px;
 }
 .header__btn {
   margin-right: 80px;
@@ -20,8 +20,9 @@
 
 // Logo
 .logo__link {
-  font: 40px/48px "HelveticaNeueCyr";
+  font: 4rem/4.8rem "HelveticaNeueCyr";
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 // Language
@@ -29,7 +30,7 @@
   display: flex;
 }
 .language__link {
-  font: 14px/16px "HelveticaNeueCyr";
+  font: 1.4rem/1.6rem "HelveticaNeueCyr";
   font-weight: 400;
   display: inline-block;
   padding: 8px 12px;
@@ -60,7 +61,7 @@
   padding: 0;
   border: 0;
   background-color: transparent;
-  transition: all 0.2s;
+  transition: all 0.3s;
   &:hover {
     i {
       &:nth-child(1) {

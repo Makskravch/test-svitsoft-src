@@ -44,8 +44,9 @@ html {
 body {
   font-family: "HelveticaNeueCyr", "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
   color: #4e254f;
-  min-height: calc(100vh + 200px);
   background-color: #fff;
 }
 
@@ -115,7 +116,7 @@ picture {
 }
 
 .header__logo {
-  margin-right: 55px;
+  margin-right: 46px;
 }
 
 .header__btn {
@@ -123,8 +124,9 @@ picture {
 }
 
 .logo__link {
-  font: 40px/48px "HelveticaNeueCyr";
+  font: 4rem/4.8rem "HelveticaNeueCyr";
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .language {
@@ -132,7 +134,7 @@ picture {
 }
 
 .language__link {
-  font: 14px/16px "HelveticaNeueCyr";
+  font: 1.4rem/1.6rem "HelveticaNeueCyr";
   font-weight: 400;
   display: inline-block;
   padding: 8px 12px;
@@ -162,7 +164,7 @@ picture {
   padding: 0;
   border: 0;
   background-color: transparent;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .btn-menu:hover i:nth-child(1) {
   transform: scale(0);
@@ -237,6 +239,168 @@ picture {
 .btn-menu i:nth-child(9) {
   bottom: 0;
   right: 0;
+}
+
+.banner-slider__item-inner {
+  position: relative;
+  min-height: calc(1080px - 96px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 90px 180px 50px;
+  background-image: url("../img/banner/hero-bg-desk.jpg");
+  background-size: 100% 100%;
+}
+
+.banner-slider-small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 972px);
+}
+.banner-slider-small .slick-dots {
+  position: absolute;
+  top: 56px;
+  left: 56px;
+  display: flex;
+}
+.banner-slider-small .slick-dots li {
+  margin-right: 14px;
+}
+.banner-slider-small .slick-dots li:last-child {
+  margin-right: 0;
+}
+.banner-slider-small .slick-dots button {
+  font: 1.6rem/2.4rem "HelveticaNeueCyr";
+  font-weight: 700;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: #9accc2;
+  opacity: 0.25;
+}
+.banner-slider-small .slick-dots .slick-active button {
+  opacity: 1;
+}
+
+.banner-slider-small__item-inner {
+  display: flex;
+  height: 256px;
+}
+
+.banner-slider-small__content {
+  position: relative;
+  width: 56%;
+  padding: 100px 22px 30px 56px;
+  background-color: #4e254f;
+  color: #9accc2;
+}
+.banner-slider-small__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% - 1px);
+  height: 100%;
+  width: 80px;
+  background-color: #4e254f;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.banner-slider-small__title {
+  font: 2.4rem/3.2rem "HelveticaNeueCyr";
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.banner-slider-small__description {
+  font: 1.6rem/2.4rem "HelveticaNeueCyr";
+  font-weight: 400;
+}
+
+.banner-slider-small__picture {
+  width: 44%;
+}
+.banner-slider-small__picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-slider__content {
+  max-width: 792px;
+  min-height: 432px;
+  padding: 80px 40px;
+  background-color: #9accc2;
+}
+
+.banner-slider__title {
+  font: 6rem/7.2rem "HelveticaNeueCyr";
+  font-weight: 900;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+}
+
+.banner-slider__link {
+  position: absolute;
+  top: 232px;
+  right: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 261px;
+  padding: 20px 32px;
+  background-color: #4e254f;
+  color: #fff;
+  text-transform: uppercase;
+}
+.banner-slider__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 73px;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  transform: skewX(-17deg);
+}
+.banner-slider__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #9accc2;
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.banner-slider__link:hover::before {
+  background-color: #4e254f;
+  z-index: 1;
+}
+.banner-slider__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+.banner-slider__link:hover span {
+  color: #4e254f;
+}
+.banner-slider__link:hover i {
+  transform: translateX(5px);
+  background-image: url("../img/svg/arrow-right_hover.svg");
+}
+.banner-slider__link span,
+.banner-slider__link i {
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.banner-slider__link-icon {
+  height: 16px;
+  width: 16px;
+  background: url("../img/svg/arrow-right.svg") no-repeat;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
