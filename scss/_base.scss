@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   font-size: $base-font-size;
 }
@@ -16,6 +20,9 @@ body {
   font-weight: 400;
   color: $color-primary;
   background-color: $color-background;
+  @media only screen and (max-width: 992px) {
+    font-size: 1.4rem;
+  }
 }
 
 img,
@@ -45,20 +52,8 @@ picture {
   display: block;
 }
 
-.container {
-  padding: 0 5%;
-  @media only screen and (max-width: 1080px) {
-    padding: 0 24px;
-  }
-  @media only screen and (max-width: 859px) {
-    padding: 0;
-  }
-}
-
-.container__inner {
-  width: 100%;
-  max-width: $site_width + px;
-  margin: 0 auto;
+.overflow {
+  overflow: hidden;
 }
 
 .icon-arrow-down {
