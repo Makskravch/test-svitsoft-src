@@ -164,6 +164,7 @@ picture {
   display: block;
   font: 4rem/4.8rem "HelveticaNeueCyr";
   font-weight: 900;
+  color: #4e254f;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 480px) {
