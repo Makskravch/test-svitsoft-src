@@ -424,6 +424,7 @@ picture {
 }
 @media only screen and (max-width: 992px) {
   .banner-slider__item-inner {
+    min-height: calc(1024px - 118px);
     padding: 50px 0 0 32px;
     background-size: cover;
     background-position: center;
@@ -509,11 +510,6 @@ picture {
   height: 256px;
 }
 @media only screen and (max-width: 992px) {
-  .banner-slider-small__item-inner {
-    height: 220px;
-  }
-}
-@media only screen and (max-width: 480px) {
   .banner-slider-small__item-inner {
     height: auto;
   }
@@ -608,7 +604,7 @@ picture {
   .banner-slider__content {
     min-height: auto;
     width: 381px;
-    padding: 56px 24px;
+    padding: 52px 24px 60px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -628,7 +624,7 @@ picture {
   .banner-slider__title {
     font-size: 4.2rem;
     line-height: 5.4rem;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 }
 @media only screen and (max-width: 480px) {
