@@ -1,3 +1,72 @@
+.banner-slider {
+  .slick-arrow {
+    height: 64px;
+    width: 44px;
+    top: unset;
+    transform: skew(-17deg);
+    background-color: $color-additional;
+    z-index: 1;
+    &::before {
+      position: relative;
+      opacity: 1;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $color-primary;
+      transform-origin: center right;
+      transform: scaleX(0);
+      transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: center left;
+      }
+    }
+  }
+  .slick-prev {
+    left: 190px;
+    bottom: 96px;
+    @media only screen and (max-width: 1440px) {
+      left: 110px;
+    }
+    @media only screen and (max-width: 992px) {
+      left: 42px;
+      bottom: 66px;
+    }
+    &::before {
+      content: url("../img/svg/arrow-left.svg");
+    }
+  }
+  .slick-next {
+    left: 253px;
+    bottom: 96px;
+    @media only screen and (max-width: 1440px) {
+      left: 173px;
+    }
+    @media only screen and (max-width: 992px) {
+      left: 105px;
+      bottom: 66px;
+    }
+    &::before {
+      content: url("../img/svg/arrow-right.svg");
+    }
+  }
+  .slick-disabled {
+    border: 1px solid $color-white;
+    background-color: transparent;
+    cursor: default;
+    &::after {
+      display: none;
+    }
+  }
+}
 .banner-slider__item-inner {
   position: relative;
   display: flex;
@@ -41,7 +110,9 @@
     position: absolute;
     top: 56px;
     left: 56px;
+    bottom: unset;
     display: flex;
+    width: auto;
     @media only screen and (max-width: 992px) {
       top: 24px;
       left: 32px;
@@ -50,9 +121,10 @@
       left: 16px;
     }
     li {
-      margin-right: 14px;
+      margin-right: 12px;
+      margin-left: 0;
       @media only screen and (max-width: 992px) {
-        margin-right: 18px;
+        margin-right: 13px;
       }
       &:last-child {
         margin-right: 0;
@@ -69,6 +141,9 @@
       @media only screen and (max-width: 992px) {
         font-size: 1.4rem;
       }
+      &::before {
+        display: none;
+      }
     }
     .slick-active {
       button {
@@ -76,6 +151,9 @@
         opacity: 1;
       }
     }
+  }
+  &.slick-dotted.slick-slider {
+    margin-bottom: 0;
   }
 }
 .banner-slider-small__item-inner {

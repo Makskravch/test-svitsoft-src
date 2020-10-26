@@ -11,7 +11,16 @@ $(document).ready(function(){
 
 
   $('.banner-slider').slick({
-    arrows: false
+    arrows: true,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 481,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
   $('.banner-slider-small').slick({
     arrows: false,
